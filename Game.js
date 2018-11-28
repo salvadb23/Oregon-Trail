@@ -58,7 +58,7 @@ OregonH.Game.init = function(){
 OregonH.Game.startJourney = function() {
   this.gameActive = true;
   this.previousTime = null;
-  this.ui.notify('A great adventure begins', 'positive');
+  this.ui.notify('A grim adventure begins', 'positive');
  
   this.step();
 };

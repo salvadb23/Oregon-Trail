@@ -10,7 +10,17 @@ body {
   overflow: hidden;
   font-family: Open Sans;
 }
- 
+
+.info-container {
+  grid-area: a;
+  width: 820px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+
+}
+
 .hidden {
   display: none;
 }
@@ -21,7 +31,11 @@ body {
  
 #journey {
   height: 100%;
-  background-color: #5F9FFF;
+  background-color: #111;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "b"
+                       "a";
 }
  
 #event {
@@ -29,18 +43,25 @@ body {
 }
  
 #progress-area {
-  float: left;
   position: relative;
-  width: 400px;
-  margin: 10px;
+  width: 800px;
+  margin: auto;
+  grid-area: b;
+  padding-top: 10px;
 }
  
 #trees {
+  height: 470px;
   width: 100%;
   image-rendering: pixelated;
+  box-sizing: border-box;
+  border: 1px black solid;
 }
  
 #caravan {
+  width: 100px;
+  height: 100px;
+  image-rendering: pixelated;
   position: absolute;
   bottom: 30px;
   left: 0;
@@ -48,14 +69,15 @@ body {
 }
  
 #stats-area {
-  background-color: white;
+  color: white;
+  background-color: black;
   float: left;
   height: 150px;
   width: 156px;
   margin: 10px;
   padding: 10px;
   font-size: 14px;
-  border: 5px black solid;
+  border: 1px white solid;
 }
  
  
@@ -65,7 +87,8 @@ body {
 }
  
 #updates-area {
-  background-color: white;
+  color: white;
+  background-color: black;
   float: left;
   width: 350px;
   margin: 10px;
@@ -73,7 +96,7 @@ body {
   padding: 10px;
   font-size: 12px;
   overflow-y: scroll;
-  border: 5px black solid;
+  border: 1px white solid;
 }
  
 .update-positive {
@@ -89,20 +112,21 @@ body {
 }
  
 #shop {
+  color: white;
   float: left;
-  background-color: white;
+  background-color: black;
   margin: 10px;
   padding: 10px;
   height: 90px;
   width: 350px;
-  border: 5px black solid;
+  border: 1px white solid;
 }
  
 .product {
   float: left;
   margin: 5px;
   padding: 2px;
-  border: 1px solid black;
+  border: 1px solid white;
   font-size: 12px;
 }
  
@@ -113,10 +137,12 @@ body {
 }
  
 #attack {
+  color: white;
   float: left;
-  background-color: white;
+  background-color: black;
   margin: 10px;
   padding: 10px;
   height: 60px;
   width: 150px;
+  border: 1px white solid;
 }
